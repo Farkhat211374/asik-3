@@ -10,4 +10,13 @@ public class Vertex <T> {
         adjacent = new ArrayList<>();
         this.index = index;
     }
+
+    public boolean hasAdjacrent(){
+        if(adjacent.size()==0)return false;
+        return true;
+    }
+
+    public void put(Vertex vertex){
+        adjacent.add(vertex);
+    }
 }
