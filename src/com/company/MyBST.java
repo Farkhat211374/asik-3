@@ -89,18 +89,18 @@ public class MyBST<K extends Comparable<K>,V> {
             else if (currentNode.right == null){
                 return currentNode.left;
             }
-            currentNode.key = minElem(currentNode.right, currentNode.right.key);
+            currentNode.key = minElemRight(currentNode.right, currentNode.right.key);
             currentNode.right = delete(currentNode.right, root.key);
         }
         return currentNode;
     }
 
-    private K minElem (Node currentNode, K minElem){
+    private K minElemRight (Node currentNode, K min){
         while(currentNode.left != null){
-            minElem = currentNode.left.key;
+            min = currentNode.left.key;
             currentNode = currentNode.left;
         }
-        return minElem;
+        return min;
     }
 
     //checking for contains
