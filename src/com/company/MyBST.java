@@ -123,4 +123,11 @@ public class MyBST<K extends Comparable<K>,V> {
             }
         }
     }
+
+    //it is for a little time!
+
+    public Iterable<K> Iterator(){
+        return (Iterable<K>)root.key;
+    }
+
 }

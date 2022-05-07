@@ -1,15 +1,34 @@
 package com.company;
-import com.sun.istack.internal.localization.NullLocalizable;
-import javax.xml.bind.SchemaOutputResolver;
-import java.util.Hashtable;
 
 public class Main {
 
     public static void main(String[] args) {
-        MyBST<Integer, String> three = new MyBST<>();
-        three.put(4,"fara");
-        three.put(6,"faraha");
-        three.put(2,"fa");
+        WeightedGraph<String> graph = new WeightedGraph<>(true);
 
+        graph.addEdge("Almaty", "Astana", 2.1);
+        graph.addEdge("Almaty", "Shymkent", 1.2);
+        graph.addEdge("Shymkent", "Astana", 3.9);
+        graph.addEdge("Astana", "Kostanay", 3.5);
+        graph.addEdge("Shymkent", "Kyzylorda", 5.4);
+
+        System.out.println("Dijkstra:");
+        Search<String> djk = new DijkstraSearch<>(graph, "Almaty");
+        outputPath(djk, "Kyzylorda");
+
+//        System.out.println("DFS:");
+//        Search<String> dfs = new DepthFirstSearch<>(graph, "Almaty");
+//        outputPath(dfs, "Kyzylorda");
+//
+//        System.out.println("\n--------------------------------");
+//
+//        System.out.println("BFS:");
+//        Search<String> bfs = new BreadthFirstSearch<>(graph, "Almaty");
+//        outputPath(bfs, "Kyzylorda");
+    }
+
+    public static void outputPath(Search<String> search, String key) {
+        for (String v : search.pathTo(key)) {
+            System.out.print(v + " -> ");
+        }
     }
 }
