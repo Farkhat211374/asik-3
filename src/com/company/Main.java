@@ -3,7 +3,10 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         WeightedGraph<String> graph = new WeightedGraph<>(true);
+=======
+>>>>>>> origin/main
 
         graph.addEdge("Almaty", "Astana", 2.1);
         graph.addEdge("Almaty", "Shymkent", 1.2);
