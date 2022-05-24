@@ -1,7 +1,9 @@
 package com.company;
 import java.util.ArrayList;
 
+
 public class Vertex <T> {
+
     int index;
     ArrayList<Vertex> adjacent;
 

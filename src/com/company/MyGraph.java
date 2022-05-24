@@ -71,5 +71,4 @@ public class MyGraph<Vertex> {
 
         return map.get(v);
     }
-
 }

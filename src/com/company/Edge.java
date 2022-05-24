@@ -8,6 +8,7 @@ public class Edge<Vertex> {
 
     /////////////////////////////
 
+
     public Edge(Vertex source, Vertex dest, Double weight) {
         this.source = source;
         this.dest = dest;
@@ -18,6 +19,7 @@ public class Edge<Vertex> {
         this.source = source;
         this.dest = dest;
     }
+
 
     ////////////////////////////////
 
